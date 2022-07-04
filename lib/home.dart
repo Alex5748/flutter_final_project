@@ -4,7 +4,10 @@ import 'package:flutter_final_project/profile.dart';
 import 'package:flutter_final_project/bottom_nav.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  final String? data;
+  final String? name;
+  final String? price;
+  Home({this.data, this.name, this.price});
 
   @override
   State<Home> createState() => _HomeState();
@@ -45,7 +48,16 @@ class _HomeState extends State<Home> {
           ),
           Card(
             child: Column(
-              children: [Text('shree')],
+              children: [
+                Text(widget.name.toString()),
+                Column(
+                  children: [
+                    Text(widget.data.toString()),
+                    Text(widget.price.toString().toString()),
+                  ],
+                ),
+                Icon(Icons.shopping_cart_checkout),
+              ],
             ),
           )
         ],
