@@ -80,17 +80,17 @@ class _HomeState extends State<Home> {
                             IconButton(
                                 onPressed: () {
                                   setState(() {
-                                    // Navigator.push(context,
-                                    //     MaterialPageRoute(builder: (context) {
-                                    //   return TestPage(
-                                    //     getData: posts[index].description,
-                                    //     starData: posts[index].stars,
-                                    //     imgData: posts[index].img,
-                                    //     priceData: posts[index].price,
-                                    //     nameData: posts[index].name,
-                                    //     locData: posts[index].location,
-                                    //   );
-                                    // }));
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return productdetails(
+                                        description: posts[index].description,
+                                        star: posts[index].stars,
+                                        img: posts[index].img,
+                                        price: posts[index].price,
+                                        name: posts[index].name,
+                                        location: posts[index].location,
+                                      );
+                                    }));
                                   });
                                 },
                                 icon: Icon(Icons.forward))
